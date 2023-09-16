@@ -7,8 +7,10 @@ import Evema from 'components/Evema';
 const appContainer = document.getElementById('evema-app') as HTMLElement;
 const root = createRoot(appContainer);
 
-root.render(
+const App = (
   <Provider store={store}>
     <Evema />
-  </Provider>,
+  </Provider>
 );
+
+root.render(App);

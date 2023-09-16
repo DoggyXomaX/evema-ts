@@ -1,9 +1,17 @@
 module.exports = {
   extends: [
     'airbnb-base',
+    'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
+
+  plugins: [
+    'react',
+    '@typescript-eslint',
+  ],
+
   rules: {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
@@ -19,7 +27,20 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'react/jsx-wrap-multilines': [
+      'error',
+      {
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "parens-new-line",
+      },
+    ]
   },
+
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
