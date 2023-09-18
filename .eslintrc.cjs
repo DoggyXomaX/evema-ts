@@ -38,7 +38,8 @@ module.exports = {
         "logical": "parens-new-line",
         "prop": "parens-new-line",
       },
-    ]
+    ],
+    'no-bitwise': 'off',
   },
 
   parser: '@typescript-eslint/parser',
